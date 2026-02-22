@@ -6,5 +6,4 @@ _site/
 index.quarto_ipynb
 /.quarto/
 **/*.quarto_ipynb
-_freeze/
 *.egg-info/

@@ -1,0 +1,12 @@
+{
+  "hash": "59b06740db6606b2d19706fdbccf9eac",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"SAPIC\"\n---\n\nSAPIC is a Particle-in-cell code for plasma physics simulations. It is designed to be fast, efficient, and easy to use, making it an ideal choice for researchers and students.\n\n::: {#bcc669ee .cell execution_count=1}\n``` {.python .cell-code}\nx = 1\ny = 2\nz = x + y\nprint(z)\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n3\n```\n:::\n:::\n\n\n::: {.callout-note}\n# Welcome to SAPIC!\nFast, efficient Particle-in-cell code for plasma physics simulations.\n:::\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}
