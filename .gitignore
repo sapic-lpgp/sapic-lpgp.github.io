@@ -3,3 +3,6 @@
 
 /.luarc.json
 _site/
+index.quarto_ipynb
+/.quarto/
+**/*.quarto_ipynb
