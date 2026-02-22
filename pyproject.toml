@@ -1,7 +1,0 @@
-[build-system]
-requires = [
-    "quarto",
-    "jupyter",
-    "nbformat"
-    ]
-build-backend = "setuptools.build_meta"
