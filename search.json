@@ -11,6 +11,6 @@
     "href": "index.html",
     "title": "SAPIC",
     "section": "",
-    "text": "SAPIC is a Particle-in-cell code for plasma physics simulations. It is designed to be fast, efficient, and easy to use, making it an ideal choice for researchers and students.\n\nx = 1\ny = 2\nz = x + y\nprint(z)\n\n3\n\n\n\n\n\n\n\n\nNoteWelcome to SAPIC!\n\n\n\nFast, efficient Particle-in-cell code for plasma physics simulations."
+    "text": "SAPIC is a Particle-in-cell code for plasma physics simulations. It is designed to be fast, efficient, and easy to use, making it an ideal choice for researchers and students.\n\n\n\n\n\n\nNoteWelcome to SAPIC!\n\n\n\nFast, efficient Particle-in-cell code for plasma physics simulations."
   }
 ]
