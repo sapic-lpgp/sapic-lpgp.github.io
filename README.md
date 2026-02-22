@@ -2,10 +2,10 @@
 
 This repository contains the SAPIC landing page.
 
-To build it locally, install quarto with
+To build it locally, install quarto and the other dependencies with
 
 ```
-pip install quarto
+pip install -r requirements.txt
 ```
 
 and then lanch the preview with
