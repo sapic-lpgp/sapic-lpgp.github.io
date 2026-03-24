@@ -1,0 +1,87 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base>
+  <div class="page-wrapper">
+    <div class="nmpp-slideshow">
+      <button class="nmpp-arrow nmpp-arrow-left" aria-label="Previous slide">&#8592;</button>
+      <button class="nmpp-arrow nmpp-arrow-right" aria-label="Next slide">&#8594;</button>
+
+      <div class="nmpp-slide active">
+        <img src="/images/banner1.png" alt="Magnetohydrodynamics" />
+        <div class="nmpp-slide-caption">
+          <div class="nmpp-slide-caption-content">
+            <strong>GVEC</strong>
+            blablabla stellarator equils.
+          </div>
+        </div>
+      </div>
+      <div class="nmpp-slide">
+        <img src="/images/banner2.jpg" alt="Simulation Visualization" />
+        <div class="nmpp-slide-caption">
+          <div class="nmpp-slide-caption-content">
+            <strong>Hybrid simulations</strong>
+            wow particles.
+          </div>
+        </div>
+      </div>
+      <div class="nmpp-slide">
+        <img src="/images/banner3.png" alt="Numerical Methods" />
+        <div class="nmpp-slide-caption">
+          <div class="nmpp-slide-caption-content">
+            <strong>Numerical Methods</strong>
+            Geometric Numerical Integration and Reduced Complexity Modelling.
+          </div>
+        </div>
+      </div>
+
+      <div class="nmpp-slideshow-controls">
+        <span class="nmpp-dot active"></span>
+        <span class="nmpp-dot"></span>
+        <span class="nmpp-dot"></span>
+      </div>
+    </div>
+
+    <h2 class="section-heading">Main codes</h2>
+
+    <h2 class="section-heading" style="margin-top: 2.5rem;">Publications</h2>
+    
+  </div>
+</Base>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const container = document.querySelector('.nmpp-slideshow');
+    if (!container) return;
+    const slides = Array.from(container.querySelectorAll('.nmpp-slide'));
+    const dots = Array.from(container.querySelectorAll('.nmpp-dot'));
+    const leftArrow = container.querySelector('.nmpp-arrow-left');
+    const rightArrow = container.querySelector('.nmpp-arrow-right');
+    let current = 0;
+    let interval: ReturnType<typeof setInterval> | null = null;
+
+    function showSlide(idx: number) {
+      slides.forEach((s, i) => s.classList.toggle('active', i === idx));
+      dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+      current = idx;
+    }
+
+    function next() { showSlide((current + 1) % slides.length); }
+    function prev() { showSlide((current - 1 + slides.length) % slides.length); }
+
+    function resetInterval() {
+      if (interval) clearInterval(interval);
+      interval = setInterval(next, 5000);
+    }
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => { showSlide(i); resetInterval(); });
+    });
+    leftArrow?.addEventListener('click', (e) => { e.preventDefault(); prev(); resetInterval(); });
+    rightArrow?.addEventListener('click', (e) => { e.preventDefault(); next(); resetInterval(); });
+
+    showSlide(0);
+    resetInterval();
+  });
+</script>
