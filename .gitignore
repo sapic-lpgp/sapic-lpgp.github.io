@@ -1,9 +1,8 @@
-.DS_Store
-.Rproj.user
+.venv/
+__pycache__/
+site/
+*.pyc
 
-/.luarc.json
-_site/
-index.quarto_ipynb
-/.quarto/
-**/*.quarto_ipynb
-*.egg-info/
+node_modules/
+dist/
+.astro/

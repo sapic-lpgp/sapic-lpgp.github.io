@@ -1,15 +1,38 @@
 # SAPIC landing page
 
-This repository contains the SAPIC landing page.
+## Local setup
 
-To build it locally, install quarto and the other dependencies with
-
-```
-pip install -r requirements.txt
+```bash
+npm install
 ```
 
-and then lanch the preview with
+## Run locally
 
+```bash
+npm run dev
 ```
-quarto preview
+
+Open `http://localhost:4321`.
+
+## Build static site
+
+```bash
+npm run build
 ```
+
+The generated site is written to `dist/`.
+
+This fetches metadata from doi.org and overwrites the `<tbody>` in `src/pages/publications.astro`.
+
+## Customize the website
+
+1. Edit the landing page at `src/pages/index.astro`.
+2. Add code pages under `src/content/codes/`; they are automatically included under the Codes menu and get their own page. Each file needs a `title` frontmatter field:
+   ```md
+   ---
+   title: MyCode
+   ---
+
+   Your content here.
+   ```
+3. Add non-code pages under `src/pages/` and add a nav link in `src/layouts/Base.astro`.
