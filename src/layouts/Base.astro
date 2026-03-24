@@ -9,9 +9,6 @@ interface Props {
 const { title } = Astro.props;
 const pageTitle = title ? `${title} — SAPIC` : 'SAPIC';
 
-const codes = await getCollection('codes');
-const codeList = [...codes].sort((a, b) => a.data.title.localeCompare(b.data.title));
-
 const path = Astro.url.pathname;
 ---
 
@@ -47,11 +44,20 @@ const path = Astro.url.pathname;
           </svg>
         </button>
 
-        <!-- <ul class="nav-links" id="nav-links" role="list">
+        <ul class="nav-links" id="nav-links" role="list">
           <li class={path === '/' ? 'nav-active' : ''}>
             <a href="/">Home</a>
           </li>
-        </ul> -->
+          <li class={path.startsWith('/gallery') ? 'nav-active' : ''}>
+            <a href="/gallery/">Gallery</a>
+          </li>
+          <li class={path.startsWith('/plasma-physics') ? 'nav-active' : ''}>
+            <a href="/plasma-physics/">Plasma physics</a>
+          </li>
+          <li class={path.startsWith('/numerics') ? 'nav-active' : ''}>
+            <a href="/numerics/">Numerics</a>
+          </li>
+        </ul>
       </nav>
     </header>
 
