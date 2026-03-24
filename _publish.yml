@@ -1,9 +1,0 @@
-website:
-  title: "SAPIC"
-  repo-url: https://github.com/sapic-lpgp/sapic-lpgp.github.io
-  repo-actions: [edit, issue]
-  output-dir: _site
-
-publish:
-  provider: github
-  branch: gh-pages

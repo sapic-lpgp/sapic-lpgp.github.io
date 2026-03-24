@@ -1,9 +1,0 @@
-.DS_Store
-.Rproj.user
-
-/.luarc.json
-_site/
-index.quarto_ipynb
-/.quarto/
-**/*.quarto_ipynb
-*.egg-info/
