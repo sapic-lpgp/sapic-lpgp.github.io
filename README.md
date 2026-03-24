@@ -32,6 +32,7 @@ This fetches metadata from doi.org and overwrites the `<tbody>` in `src/pages/pu
    ---
    title: MyCode
    ---
+
    Your content here.
    ```
 3. Add non-code pages under `src/pages/` and add a nav link in `src/layouts/Base.astro`.
