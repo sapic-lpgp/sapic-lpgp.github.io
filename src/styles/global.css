@@ -232,6 +232,39 @@ h5 {
   font-size: 1rem;
 }
 
+/* ─── MARKDOWN CONTENT ─── */
+
+.page-wrapper h1:not([class]) {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.page-wrapper h2:not([class]) {
+  font-size: 1.35rem;
+  margin: 2rem 0 0.75rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--nmpp-line);
+}
+
+.page-wrapper h3:not([class]) {
+  font-size: 1.1rem;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.page-wrapper p {
+  margin-bottom: 1rem;
+}
+
+.page-wrapper ul,
+.page-wrapper ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.page-wrapper li {
+  margin-bottom: 0.25rem;
+}
+
 /* ─── PROSE ─── */
 
 .prose {
