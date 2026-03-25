@@ -28,6 +28,7 @@ This fetches metadata from doi.org and overwrites the `<tbody>` in `src/pages/pu
 
 1. Edit the landing page at `src/pages/index.astro`.
 2. Add code pages under `src/content/codes/`; they are automatically included under the Codes menu and get their own page. Each file needs a `title` frontmatter field:
+
    ```md
    ---
    title: MyCode
@@ -35,4 +36,5 @@ This fetches metadata from doi.org and overwrites the `<tbody>` in `src/pages/pu
 
    Your content here.
    ```
+
 3. Add non-code pages under `src/pages/` and add a nav link in `src/layouts/Base.astro`.
